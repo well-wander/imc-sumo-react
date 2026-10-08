@@ -10,6 +10,7 @@ Uma calculadora de IMC (Índice de Massa Corporal) com o tema de um **campeonato
 - **Formulário** com os campos **altura** (cm) e **peso** (kg).
 - O **IMC é calculado na hora**, a cada número digitado, e aparece com a **classificação**.
 - A **tabela de classificação da OMS** destaca a linha da faixa em que o IMC se encaixa.
+- Fundo ilustrado com lutadores de sumô e títulos na fonte **Potta One**, com traço de pincel japonês.
 
 ## Como o código está organizado
 
@@ -19,6 +20,7 @@ src/
   components/Formulario.jsx          campos de altura e peso
   components/Resultado.jsx           IMC e classificação
   components/TabelaClassificacao.jsx tabela com a linha atual destacada
+  components/FundoLutadores.jsx      ilustrações de lutadores espalhadas pelo fundo
   App.jsx                            guarda o estado e junta os componentes
 ```
 

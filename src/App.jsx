@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Formulario from './components/Formulario'
 import Resultado from './components/Resultado'
 import TabelaClassificacao from './components/TabelaClassificacao'
+import FundoLutadores from './components/FundoLutadores'
 import { calcularImc, classificarImc } from './utils/imc'
 import './App.css'
 
@@ -20,6 +21,8 @@ function App() {
 
   return (
     <>
+      <FundoLutadores />
+
       <header className="cabecalho">
         <svg className="dohyo" viewBox="0 0 100 100" aria-hidden="true">
           <circle cx="50" cy="50" r="46" />

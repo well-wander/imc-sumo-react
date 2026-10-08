@@ -1,0 +1,25 @@
+.fundo {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.lutador {
+  position: absolute;
+  height: auto;
+  opacity: 0.28;
+}
+
+/* no celular, menos lutadores e menores, para não poluir */
+@media (max-width: 760px) {
+  .soDesktop {
+    display: none;
+  }
+
+  .lutador {
+    max-width: 90px;
+    opacity: 0.18;
+  }
+}

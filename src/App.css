@@ -36,9 +36,9 @@
 
 h1 {
   margin: 8px 0;
-  font-family: 'Shippori Mincho', serif;
+  font-family: 'Potta One', serif;
   font-size: clamp(2rem, 7vw, 3rem);
-  font-weight: 800;
+  font-weight: 400;
 }
 
 .subtitulo {

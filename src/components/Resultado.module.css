@@ -13,9 +13,9 @@
 
 .numero {
   margin: 4px 0;
-  font-family: 'Shippori Mincho', serif;
+  font-family: 'Potta One', serif;
   font-size: clamp(3rem, 14vw, 5rem);
-  font-weight: 800;
+  font-weight: 400;
   line-height: 1;
   color: var(--vermelho);
 }
