@@ -8,7 +8,7 @@
   --cinza: #5f5a52;
   --linha: #e0d6c3;
 
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Noto Sans JP', system-ui, sans-serif;
   color: var(--tinta);
   background: var(--fundo);
 }

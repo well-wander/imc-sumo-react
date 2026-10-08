@@ -13,9 +13,8 @@
 
 .numero {
   margin: 4px 0;
-  font-family: 'Potta One', serif;
   font-size: clamp(3rem, 14vw, 5rem);
-  font-weight: 400;
+  font-weight: 900;
   line-height: 1;
   color: var(--vermelho);
 }
@@ -28,6 +27,15 @@
   background: var(--tinta);
   color: var(--papel);
   font-weight: 600;
+}
+
+.grito {
+  margin: 16px 0 0;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  color: var(--vermelho);
+  opacity: 0.7;
+  cursor: help;
 }
 
 .aviso {

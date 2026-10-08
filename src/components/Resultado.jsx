@@ -16,6 +16,13 @@ function Resultado({ imc, classificacao }) {
         {imc.toLocaleString('pt-BR', { minimumFractionDigits: 1, maximumFractionDigits: 1 })}
       </p>
       <p className={styles.classificacao}>{classificacao.nome}</p>
+      <p
+        lang="ja"
+        className={styles.grito}
+        title="Hakkeyoi, nokotta! O grito do juiz durante a luta: “vamos, continua!”"
+      >
+        はっけよい、のこった！
+      </p>
     </div>
   )
 }

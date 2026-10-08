@@ -5,10 +5,17 @@
 
 .tabela caption {
   margin-bottom: 12px;
-  font-family: 'Potta One', serif;
   font-size: 1.1rem;
-  font-weight: 400;
+  font-weight: 900;
   text-align: left;
+}
+
+.japones {
+  margin-left: 4px;
+  font-size: 0.85rem;
+  color: var(--vermelho);
+  opacity: 0.7;
+  cursor: help;
 }
 
 .tabela th,

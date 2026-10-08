@@ -25,6 +25,18 @@
   stroke-linecap: round;
 }
 
+.japones {
+  letter-spacing: 0.15em;
+  color: var(--vermelho);
+  cursor: help;
+}
+
+.japones--destaque {
+  margin: 0 0 4px;
+  font-size: 1.6rem;
+  font-weight: 900;
+}
+
 .evento {
   margin: 0;
   font-size: 0.8rem;
@@ -36,9 +48,8 @@
 
 h1 {
   margin: 8px 0;
-  font-family: 'Potta One', serif;
   font-size: clamp(2rem, 7vw, 3rem);
-  font-weight: 400;
+  font-weight: 900;
 }
 
 .subtitulo {

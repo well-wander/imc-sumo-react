@@ -5,7 +5,10 @@ import styles from './TabelaClassificacao.module.css'
 function TabelaClassificacao({ classificacaoAtual }) {
   return (
     <table className={styles.tabela}>
-      <caption>Tabela de classificação do IMC (OMS)</caption>
+      <caption>
+        Tabela de classificação do IMC (OMS){' '}
+        <span lang="ja" className={styles.japones} title="Bunruihyō: tabela de classificação">分類表</span>
+      </caption>
       <thead>
         <tr>
           <th scope="col">IMC</th>

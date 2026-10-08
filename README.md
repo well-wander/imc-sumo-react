@@ -10,7 +10,17 @@ Uma calculadora de IMC (Índice de Massa Corporal) com o tema de um **campeonato
 - **Formulário** com os campos **altura** (cm) e **peso** (kg).
 - O **IMC é calculado na hora**, a cada número digitado, e aparece com a **classificação**.
 - A **tabela de classificação da OMS** destaca a linha da faixa em que o IMC se encaixa.
-- Fundo ilustrado com lutadores de sumô e títulos na fonte **Potta One**, com traço de pincel japonês.
+- Fundo ilustrado com lutadores de sumô em colunas fixas (sem sobreposição), cada um com o nome do movimento em japonês.
+- Fonte **Noto Sans JP** e *easter eggs* em japonês pela página. Passe o mouse para ver a tradução:
+
+| Japonês | Leitura | Significado |
+|---|---|---|
+| 大相撲 | ōzumō | o grande torneio de sumô |
+| はっけよい、のこった！ | hakkeyoi, nokotta! | o grito do juiz durante a luta |
+| 分類表 | bunruihyō | tabela de classificação |
+| ごっつぁんです | gottsan desu | o "muito obrigado" dos lutadores |
+| 四股 · 塩 · 仕切り · 突っ張り | shiko · shio · shikiri · tsuppari | movimentos e rituais do sumô (no fundo) |
+| おにぎり | onigiri | o bolinho de arroz do lanche |
 
 ## Como o código está organizado
 

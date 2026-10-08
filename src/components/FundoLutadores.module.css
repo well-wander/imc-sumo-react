@@ -8,18 +8,47 @@
 
 .lutador {
   position: absolute;
+  margin: 0;
+}
+
+.lutador img {
+  display: block;
+  width: 100%;
   height: auto;
   opacity: 0.28;
 }
 
-/* no celular, menos lutadores e menores, para não poluir */
-@media (max-width: 760px) {
-  .soDesktop {
+/* o nome do movimento, escrito de cima para baixo como no japonês tradicional */
+.legenda {
+  position: absolute;
+  top: 0;
+  right: -18px;
+  writing-mode: vertical-rl;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--vermelho);
+  opacity: 0.45;
+}
+
+/* as colunas internas só cabem quando sobra espaço dos lados do cartão */
+@media (max-width: 1400px) {
+  .soTelaLarga {
     display: none;
   }
+}
 
+/* no celular, menores e mais claros, para não poluir */
+@media (max-width: 760px) {
   .lutador {
-    max-width: 90px;
-    opacity: 0.18;
+    max-width: 80px;
+  }
+
+  .lutador img {
+    opacity: 0.16;
+  }
+
+  .legenda {
+    display: none;
   }
 }

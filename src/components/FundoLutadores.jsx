@@ -5,28 +5,62 @@ import agachado from '../assets/lutadores/agachado.png'
 import onigiri from '../assets/lutadores/onigiri.png'
 import styles from './FundoLutadores.module.css'
 
-// posição, tamanho e inclinação de cada lutador espalhado pelo fundo
-const LUTADORES = [
-  { id: 'chute', imagem: chute, estilo: { top: '6%', left: '4%', width: 150, rotate: '-8deg' } },
-  { id: 'sal', imagem: sal, estilo: { top: '10%', right: '5%', width: 130, rotate: '6deg' } },
-  { id: 'agachado', imagem: agachado, estilo: { top: '48%', left: '7%', width: 120, rotate: '4deg' }, soDesktop: true },
-  { id: 'pose', imagem: pose, estilo: { top: '52%', right: '6%', width: 140, rotate: '-5deg' }, soDesktop: true },
-  { id: 'onigiri', imagem: onigiri, estilo: { bottom: '4%', left: '12%', width: 115, rotate: '-3deg' } },
-  { id: 'chute-2', imagem: chute, estilo: { bottom: '6%', right: '10%', width: 120, rotate: '10deg', transform: 'scaleX(-1)' }, soDesktop: true }
+// cada lutador vem com o nome do movimento em japonês, escrito na vertical ao lado
+const FIGURAS = [
+  { imagem: chute, largura: 130, japones: '四股' }, // shiko: o pisão com a perna levantada
+  { imagem: sal, largura: 115, japones: '塩' }, // shio: o sal jogado para purificar o ringue
+  { imagem: agachado, largura: 120, japones: '仕切り' }, // shikiri: a posição de largada
+  { imagem: pose, largura: 120, japones: '突っ張り' }, // tsuppari: o empurrão com as palmas
+  { imagem: onigiri, largura: 115, japones: 'おにぎり' } // onigiri: o bolinho de arroz do lanche
 ]
+
+// colunas fixas nas laterais; as internas só aparecem em telas largas
+const COLUNAS = [
+  { lado: 'left', distancia: 24, deslocamento: 0, larga: false },
+  { lado: 'right', distancia: 24, deslocamento: 130, larga: false },
+  { lado: 'left', distancia: 220, deslocamento: 130, larga: true },
+  { lado: 'right', distancia: 220, deslocamento: 0, larga: true }
+]
+
+// o espaçamento vertical é maior que a figura mais alta, então nenhuma encosta na outra
+const ESPACAMENTO = 260
+const LINHAS = 8
+const INCLINACOES = [-8, 5, -3, 9, -6, 2]
+
+const lutadores = COLUNAS.flatMap((coluna, indiceColuna) =>
+  Array.from({ length: LINHAS }, (_, linha) => {
+    const ordem = indiceColuna * LINHAS + linha
+    const figura = FIGURAS[(linha + indiceColuna * 2) % FIGURAS.length]
+
+    return {
+      id: `${indiceColuna}-${linha}`,
+      ...figura,
+      larga: coluna.larga,
+      estilo: {
+        top: 32 + coluna.deslocamento + linha * ESPACAMENTO,
+        [coluna.lado]: coluna.distancia,
+        width: figura.largura,
+        rotate: `${INCLINACOES[ordem % INCLINACOES.length]}deg`
+      },
+      // espelha metade das figuras (só a imagem, não o texto) para o fundo não parecer repetido
+      espelhado: ordem % 2 === 1
+    }
+  })
+)
 
 // decorativo: escondido de leitores de tela e sem capturar cliques
 function FundoLutadores() {
   return (
     <div className={styles.fundo} aria-hidden="true">
-      {LUTADORES.map(({ id, imagem, estilo, soDesktop }) => (
-        <img
+      {lutadores.map(({ id, imagem, japones, larga, estilo, espelhado }) => (
+        <figure
           key={id}
-          src={imagem}
-          alt=""
-          className={soDesktop ? `${styles.lutador} ${styles.soDesktop}` : styles.lutador}
+          className={larga ? `${styles.lutador} ${styles.soTelaLarga}` : styles.lutador}
           style={estilo}
-        />
+        >
+          <img src={imagem} alt="" style={espelhado ? { scale: '-1 1' } : undefined} />
+          <span lang="ja" className={styles.legenda}>{japones}</span>
+        </figure>
       ))}
     </div>
   )

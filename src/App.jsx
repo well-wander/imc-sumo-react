@@ -24,16 +24,20 @@ function App() {
       <FundoLutadores />
 
       <header className="cabecalho">
-        <svg className="dohyo" viewBox="0 0 100 100" aria-hidden="true">
+        <svg className="dohyo" viewBox="0 0 100 100" role="img" aria-label="Dohyō, o ringue do sumô">
+          <title>土俵 (dohyō): o ringue do sumô</title>
           <circle cx="50" cy="50" r="46" />
           <circle className="anel" cx="50" cy="50" r="34" />
           <line x1="40" y1="44" x2="40" y2="56" />
           <line x1="60" y1="44" x2="60" y2="56" />
         </svg>
+        <p lang="ja" className="japones japones--destaque" title="Ōzumō: o grande torneio de sumô">
+          大相撲
+        </p>
         <p className="evento">Grande Torneio de Sumô · Pesagem oficial</p>
         <h1>Calculadora de IMC</h1>
         <p className="subtitulo">
-          Antes de subir no dohyō, todo lutador passa pela balança.
+          Antes de subir no dohyo (o ringue), todo lutador passa pela balança.
         </p>
       </header>
 
@@ -58,7 +62,13 @@ function App() {
         </p>
       </main>
 
-      <footer className="rodape">Exercício de React · EBAC</footer>
+      <footer className="rodape">
+        <span lang="ja" className="japones" title="Gottsan desu: o “muito obrigado” dos lutadores de sumô">
+          ごっつぁんです
+        </span>
+        <br />
+        Exercício de React · EBAC
+      </footer>
     </>
   )
 }
