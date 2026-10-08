@@ -1,0 +1,38 @@
+.resultado {
+  text-align: center;
+}
+
+.rotulo {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--cinza);
+}
+
+.numero {
+  margin: 4px 0;
+  font-family: 'Shippori Mincho', serif;
+  font-size: clamp(3rem, 14vw, 5rem);
+  font-weight: 800;
+  line-height: 1;
+  color: var(--vermelho);
+}
+
+.classificacao {
+  display: inline-block;
+  margin: 8px 0 0;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: var(--tinta);
+  color: var(--papel);
+  font-weight: 600;
+}
+
+.aviso {
+  margin: 0;
+  text-align: center;
+  font-style: italic;
+  color: var(--cinza);
+}

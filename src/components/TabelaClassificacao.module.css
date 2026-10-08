@@ -1,0 +1,32 @@
+.tabela {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabela caption {
+  margin-bottom: 12px;
+  font-family: 'Shippori Mincho', serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  text-align: left;
+}
+
+.tabela th,
+.tabela td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--linha);
+}
+
+.tabela th {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--cinza);
+}
+
+.ativa td {
+  background: var(--vermelho);
+  color: #fff;
+  font-weight: 600;
+}

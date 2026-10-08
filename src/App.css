@@ -1,0 +1,74 @@
+.cabecalho {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+/* o dohyō: o ringue circular de palha do sumô, com as duas linhas de largada */
+.dohyo {
+  width: 72px;
+  height: 72px;
+  margin-bottom: 12px;
+  fill: var(--argila);
+  stroke: var(--tinta);
+  stroke-width: 4;
+}
+
+.dohyo .anel {
+  fill: none;
+  stroke: var(--papel);
+  stroke-width: 3;
+}
+
+.dohyo line {
+  stroke: var(--papel);
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+
+.evento {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--vermelho);
+}
+
+h1 {
+  margin: 8px 0;
+  font-family: 'Shippori Mincho', serif;
+  font-size: clamp(2rem, 7vw, 3rem);
+  font-weight: 800;
+}
+
+.subtitulo {
+  margin: 0;
+  color: var(--cinza);
+}
+
+.cartao {
+  padding: 32px 24px;
+  background: var(--papel);
+  border-top: 6px solid var(--vermelho);
+  box-shadow: 0 10px 30px rgba(29, 42, 77, 0.12);
+}
+
+.area-resultado {
+  margin: 32px 0;
+  padding: 24px 0;
+  border-top: 2px solid var(--linha);
+  border-bottom: 2px solid var(--linha);
+}
+
+.nota {
+  margin: 24px 0 0;
+  font-size: 0.9rem;
+  color: var(--cinza);
+}
+
+.rodape {
+  margin-top: 32px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--cinza);
+}

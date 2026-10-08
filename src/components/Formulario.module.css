@@ -1,0 +1,34 @@
+.formulario {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--cinza);
+}
+
+.campo input {
+  padding: 14px;
+  border: 2px solid var(--argila);
+  border-radius: 4px;
+  background: #fff;
+  color: var(--tinta);
+  font: inherit;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+.campo input:focus {
+  outline: 3px solid var(--vermelho);
+  outline-offset: 1px;
+}
